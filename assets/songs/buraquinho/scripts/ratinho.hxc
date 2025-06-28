@@ -1,0 +1,80 @@
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxSprite;
+import flxanimate.FlxAnimate;
+import flixel.FlxG;
+import Paths;
+
+var demonio:FlxAnimate;
+
+var brick:FlxSprite;
+var rato:FlxSprite;
+
+var notePlaceP:Array<Float> = [[],[],[],[]];
+var notePlaceO:Array<Float> = [[],[],[],[]];
+
+var stuffShouldDie:Array<Dynamic> = [];
+
+function createPreCharacters()
+{
+    this.camHUD.visible = false;
+    this.camStrum.visible = false;
+
+    demonio = new FlxAnimate(275);
+    demonio.loadAtlas(Paths.getPath('images/characters/buraco/entrada feia'));
+    demonio.anim.addBySymbol('anim', 'anim', 24, false);
+    demonio.cameras = [this.camOther];
+    demonio.visible = false;
+    this.add(demonio);
+
+    rato = new FlxSprite(0, 70);
+    rato.frames = Paths.getSparrowAtlas('songsAssets/buraco/rato');
+    rato.animation.addByPrefix('idle', 'dance', 15, true);
+    rato.animation.play('idle');
+    rato.visible = false;
+    this.add(rato);
+
+    brick = new FlxSprite(1100, 275, Paths.image('songsAssets/buraco/brick'));
+    brick.visible = false;
+    this.add(brick);
+}
+
+function startedShit()
+{
+    demonio.anim.play('anim');
+    this.camOther.fade(0xFF000000, 3, true);
+    demonio.visible = true;
+
+    for(i in 0...4) {
+        notePlaceP[i][0] = this.bfStrumline.strumGroup.members[i].x; notePlaceP[i][1] = this.bfStrumline.strumGroup.members[i].y;
+        notePlaceO[i][0] = this.dadStrumline.strumGroup.members[i].x; notePlaceO[i][1] = this.dadStrumline.strumGroup.members[i].y;
+    }
+}
+
+function onEventHit(name, v1, v2, v3)
+{
+    if(name == 'Song Script Event') {
+        if(v1 == 'notasBug')
+        {
+            for(i in 0...4) {
+                this.bfStrumline.strumGroup.members[i].setPosition(v2!='fix'?FlxG.random.float(0, FlxG.width-110):notePlaceP[i][0], v2!='fix'?FlxG.random.float(0, FlxG.height-110):notePlaceP[i][1]);
+                this.dadStrumline.strumGroup.members[i].setPosition(v2!='fix'?FlxG.random.float(0, FlxG.width-110):notePlaceO[i][0], v2!='fix'?FlxG.random.float(0, FlxG.height-110):notePlaceO[i][1]);
+            }
+        }
+    }
+}
+
+function stepHit(a)
+{
+    if(a == 60)
+        demonio.kill();
+    if(a == 572) {
+        FlxTween.tween(rato, {x: 340}, 0.5, {ease: FlxEase.expoOut}); rato.visible = true;
+        FlxTween.tween(brick, {x: 800}, 0.5, {ease: FlxEase.expoOut}); brick.visible = true;
+        this.gf.char.altIdle = '-rata';
+    }
+    if(a == 832)
+        for(spr in [brick, this.camHUD, this.camStrum]) FlxTween.tween(spr, {alpha: 0}, 8, {ease: FlxEase.expoInOut});
+    if(a == 912)
+        FlxTween.tween(rato, {alpha: 0, x: rato.x+50}, 5, {ease: FlxEase.quadOut});
+}

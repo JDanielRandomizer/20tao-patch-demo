@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="17bucks.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bolho0000" x="181" y="6" width="168" height="335" frameX="0" frameY="0" frameWidth="169" frameHeight="335"/>
+	<SubTexture name="bolho0001" x="181" y="6" width="168" height="335" frameX="0" frameY="0" frameWidth="169" frameHeight="335"/>
+	<SubTexture name="bolho0002" x="355" y="6" width="168" height="335" frameX="0" frameY="0" frameWidth="169" frameHeight="335"/>
+	<SubTexture name="bolho0003" x="355" y="6" width="168" height="335" frameX="0" frameY="0" frameWidth="169" frameHeight="335"/>
+	<SubTexture name="bolho0004" x="6" y="6" width="169" height="335"/>
+	<SubTexture name="bolho0005" x="6" y="6" width="169" height="335"/>
+</TextureAtlas>

@@ -1,0 +1,48 @@
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.math.FlxMath;
+import flixel.FlxG;
+
+import states.PlayState;
+import objects.hud.HealthIcon;
+
+var iconNhonho:HealthIcon;
+function createPost()
+{
+    FlxG.camera.bgColor = 0xFFFFFFFF;
+    this.hudBuild.healthBar.flipIcons = true;
+
+   if(!SaveData.data.get("Middlescroll")) {
+        for(i in 0...4) {
+            FlxTween.tween(this.bfStrumline.strumGroup.members[i], {x:this.dadStrumline.strumGroup.members[i].x, angle: 360}, 1.5+i/10, {ease: FlxEase.expoOut});
+            FlxTween.tween(this.dadStrumline.strumGroup.members[i], {x: this.bfStrumline.strumGroup.members[i].x, angle: 360}, 1.5+i/10, {ease: FlxEase.expoOut});
+        }
+    }
+
+    iconNhonho = new HealthIcon().setIcon("nhonho", true);
+    iconNhonho.cameras = [this.camHUD];
+    iconNhonho.setPosition(this.hudBuild.healthBar.icons[0].x+75, this.hudBuild.healthBar.icons[0].y); // vai icar meio fora de tela
+    iconNhonho.alpha = 0;
+    this.insert(8,iconNhonho);
+}
+
+function update(elapsed) {
+    iconNhonho.scale.set(FlxMath.lerp(iconNhonho.scale.x, 0.75, FlxG.elapsed*7), FlxMath.lerp(iconNhonho.scale.y, 0.75, FlxG.elapsed*7));
+    iconNhonho.updateHitbox();
+
+    iconNhonho.setAnim(this.hudBuild.health);
+    iconNhonho.angle += ((50*elapsed)*Math.abs(1.85-this.hudBuild.health));
+}
+
+function beatHit(b) {
+    if(b % 2 == 0) {
+        iconNhonho.scale.set(1, 1);
+        iconNhonho.updateHitbox();
+    }
+
+    if(b==288)
+        PlayState.cameraSpeed = 10;
+}
+
+function countDownTickle(t, tt)
+    if(t == 2) FlxTween.tween(iconNhonho, {alpha:1}, tt, {ease: FlxEase.cubeOut});

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rato.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dance0000" x="6" y="6" width="500" height="500"/>
+	<SubTexture name="dance0001" x="6" y="6" width="500" height="500"/>
+	<SubTexture name="dance0002" x="6" y="6" width="500" height="500"/>
+	<SubTexture name="dance0003" x="6" y="512" width="500" height="500"/>
+	<SubTexture name="dance0004" x="6" y="512" width="500" height="500"/>
+	<SubTexture name="dance0005" x="6" y="512" width="500" height="500"/>
+	<SubTexture name="dance0006" x="512" y="6" width="500" height="500"/>
+	<SubTexture name="dance0007" x="512" y="6" width="500" height="500"/>
+	<SubTexture name="dance0008" x="512" y="6" width="500" height="500"/>
+	<SubTexture name="dance0009" x="512" y="512" width="500" height="500"/>
+	<SubTexture name="dance0010" x="512" y="512" width="500" height="500"/>
+	<SubTexture name="dance0011" x="512" y="512" width="500" height="500"/>
+	<SubTexture name="dance0012" x="1018" y="6" width="500" height="500"/>
+	<SubTexture name="dance0013" x="1018" y="6" width="500" height="500"/>
+	<SubTexture name="dance0014" x="1018" y="6" width="500" height="500"/>
+	<SubTexture name="dance0015" x="1018" y="512" width="500" height="500"/>
+	<SubTexture name="dance0016" x="1018" y="512" width="500" height="500"/>
+	<SubTexture name="dance0017" x="1018" y="512" width="500" height="500"/>
+	<SubTexture name="dance0018" x="1524" y="6" width="500" height="500"/>
+	<SubTexture name="dance0019" x="1524" y="6" width="500" height="500"/>
+	<SubTexture name="dance0020" x="1524" y="6" width="500" height="500"/>
+	<SubTexture name="dance0021" x="1524" y="512" width="500" height="500"/>
+	<SubTexture name="dance0022" x="1524" y="512" width="500" height="500"/>
+	<SubTexture name="dance0023" x="1524" y="512" width="500" height="500"/>
+	<SubTexture name="dance0024" x="2030" y="6" width="500" height="500"/>
+	<SubTexture name="dance0025" x="2030" y="6" width="500" height="500"/>
+	<SubTexture name="dance0026" x="2030" y="6" width="500" height="500"/>
+</TextureAtlas>

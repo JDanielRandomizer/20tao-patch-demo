@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="corner.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="a0000" x="0" y="0" width="273" height="267" pivotX="0" pivotY="0"/>
+	<SubTexture name="a0001" x="0" y="0" width="273" height="267"/>
+	<SubTexture name="a0002" x="273" y="0" width="273" height="267"/>
+	<SubTexture name="a0003" x="546" y="0" width="272" height="267" frameX="0" frameY="0" frameWidth="273" frameHeight="267"/>
+	<SubTexture name="a0004" x="273" y="0" width="273" height="267"/>
+</TextureAtlas>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="herself minus.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dead minus0000" x="0" y="0" width="460" height="637"/>
+	<SubTexture name="dead minus0001" x="0" y="0" width="460" height="637"/>
+	<SubTexture name="dead minus0002" x="460" y="0" width="460" height="637"/>
+	<SubTexture name="dead minus0003" x="460" y="0" width="460" height="637"/>
+	<SubTexture name="dead minus0004" x="920" y="0" width="460" height="637"/>
+	<SubTexture name="dead minus0005" x="920" y="0" width="460" height="637"/>
+</TextureAtlas>

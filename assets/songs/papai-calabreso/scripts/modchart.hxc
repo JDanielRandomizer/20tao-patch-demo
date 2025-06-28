@@ -1,0 +1,45 @@
+// maioria das coisa e event, mas umas coisas vou mexer aqui
+import flixel.FlxG;
+import states.PlayState;
+import backend.utils.CoolUtil;
+
+var healthName = CoolUtil.getLangText(34);
+
+function createPost()
+{
+    PlayState.setupCalabreso();
+
+    this.camGame.bgColor = 0x00000000;
+
+    this.stageBuild.visible = false;
+    this.boyfriend.visible = false;
+    this.gf.visible = false;
+
+    this.hudBuild.healthBar.visible = false;
+
+    // this.strumlines.cameras = [this.camGame];
+    this.dadStrumline.visible = false;
+
+    for(i in 0...4) {
+        this.bfStrumline.strumGroup.members[i].x = 50 + 96 * i;
+        this.bfStrumline.strumGroup.members[i].initialPos.y = this.bfStrumline.downscroll ? 650 : 60;
+        this.bfStrumline.strumGroup.members[i].scale.set(0.6, 0.6);
+    }
+
+    this.hudBuild.timeTxt.visible = false;
+    this.hudBuild.ratingGrp.visible = false;
+
+    this.hudBuild.infoTxt.y = this.bfStrumline.downscroll ? 10 : 690;
+}
+
+function update(elapsed) // alt + enter my forever hatret
+{
+    if(FlxG.fullscreen) 
+        PlayState.setupCalabreso();
+}
+
+function updatedText()
+{
+    this.hudBuild.infoTxt.text = healthName+': ' + Math.floor((this.hudBuild.health*100)/2) + '%';
+    this.hudBuild.infoTxt.x = 192-this.hudBuild.infoTxt.width/2;
+}

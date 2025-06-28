@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="20tao.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="200000" x="6" y="6" width="535" height="234"/>
+	<SubTexture name="200001" x="6" y="6" width="535" height="234"/>
+	<SubTexture name="200002" x="547" y="230" width="492" height="211" frameX="-21" frameY="-12" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200003" x="547" y="230" width="492" height="211" frameX="-21" frameY="-12" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200004" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200005" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200006" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200007" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200008" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200009" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200010" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200011" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200012" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200013" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200014" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200015" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200016" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200017" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200018" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200019" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200020" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200021" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200022" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200023" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200024" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200025" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200026" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200027" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200028" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200029" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200030" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200031" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200032" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200033" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+	<SubTexture name="200034" x="547" y="6" width="502" height="218" frameX="-16" frameY="-8" frameWidth="535" frameHeight="234"/>
+</TextureAtlas>

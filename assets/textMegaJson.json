@@ -1,0 +1,67 @@
+{
+    "thisShit": 
+    [
+        ["aperte enter", "press enter"],
+        ["pelo", "already"],
+        ["meu bem", "please"],
+        ["apre", "pre"],
+        ["apresen", "presen"],
+        ["apresenta", "presenting"],
+        ["o", "the"],
+        ["gran", "go"],
+        ["grande", "goat"],
+        ["oi", "hi"],
+
+        ["bem vindo a minha galeria memes!", "welcome to my funny gallery!"],
+        
+        ["A linguagem do seu jogo (NÃO MUDA TODOS TEXTOS)\nYour game language (DOESN'T CHANGE ALL TEXTS)", "Your game language (DOESN'T CHANGE ALL TEXTS)\nA linguagem do seu jogo (NÃO MUDA TODOS TEXTOS)"],
+        ["Se vai ter FLASHS, se não vai ter ou se vai reduzir", "Whether to show flashing lights and colors"],
+        ["Se vai ter um display do seu FPS e memoria no canto superior esquerdo", "Whether you want a counter showing your framerate and memory usage counter in the corner of the game"],
+        ["Se o jogo vai parar quando você desfocar do jogo", "Pauses the game when the window is unfocused"],
+        ["Se o jogo vai contar de 3 a 0 ao despausar", "Whether you want to have a countdown when unpausing the game"],
+        ["Disabilita umas coisas para reduzir o lag (NÃO FUNCIONA EM TODA MUSICA)", "Disables extra assets that might make very low end computers lag (DON'T WORK IN EVERY SONG)"],
+        ["Deixa você apertar as notas sem errar", "Makes you able to press keys freely without missing notes"],
+        ["Coloca suas notas em baixo", "Makes the notes go down instead of up"],
+        ["Tira as notas do oponente e coloca suas notas no centro da tela", "Disables the opponent's notes and moves yours to the middle"],
+        ["Bem auto explicativo", "Self explanatory"],
+        ["O som que toca ao clicar em uma nota", "Whether to play hitsounds whenever you hit a note"],
+        ["O nivel do som ao acertar a nota (só funciona se o som estiver ativo)", "Only works when Hitsounds aren't off"],
+        ["Se vai ter um SPLASH quando você acertar uma nota com sick.\nDesabilite se te destrai", "Whether a splash appears when you hit a note perfectly.\nDisable if it distracts you"],
+        ["Se a nota vai ter um SPLASH ao segurar a nota.\nDesabilite se te destrai (SÓ FUNCIONA SE O NOTE SPLASH NORMAL ESTIVER ", "Whether a splash appears when you completely press a hold note.\nDisable if it distracts you. (Only works if Note Splashes is enabled)"],
+        ["Quando desabilitado, o seu FPS provavelmente vai subir mas os sprites não serão lisos", "Disabling it might increase the fps at the cost of smoother sprites"],
+        ["Corta o final de notas de segurar como em engines antigas", "Cuts the end of each hold note like classic engines did"],
+        ["Se o personagem vai se manter estatico em quanto segura uma nota.", "Whether the character stays static when playing a hold note."],
+        ["Faz só aparecer um rating por vez", "Makes only one rating appear at a time"],
+        ["Faz o rating ficar na camera HUD", "Makes the ratings stick on the HUD"],
+        ["Faz o timer visivel", "Makes the song timer visible"],
+
+        ["Pontuação", "Score"],
+        ["Precisão", "Accuracy"],
+        ["Erros", "Misses"],
+        ["Vida", "Health"],
+
+        ["MAIOR PONTUAÇÃO", "HIGHSCORE"],
+        ["PRECISÃO", "ACCURACY"],
+        ["ERROS", "MISSES"],
+
+        ["musico", "musician"]
+    ],
+    "galleryStuff":
+    [
+        ["O tipo de coisa que entra no mod", "The type of stuff that is suggested for the mod"],
+        ["Ele tá chutando", "He's kicking"],
+        ["A Bolho antiga", "Bolho's old sprite"],
+        ["O miss antigo", "Her old miss"],
+        ["Pode usar!", "Pode usar!"],
+        ["Menu antigo", "The old menu"],
+        ["Gosto desse BF", "I like how I drew BF here"],
+        ["Informação????", "Information????"],
+        ["Insira uma imagem de mim morto", "Someone kill me please"],
+        ["Lore", "Lore\"\n\"(NO, they DON'T date (Yes, she's the GF from the mod))"],
+        ["Quado eu não sabia que cabelo colocar na GF\"\n\"(o 2 que ganhou)", "The little poll that I made so we could decide which hair GF would have\"\n\"(the second won)\""],
+        ["Sim, idea bem merda", "Yes, pretty bad idea"],
+        ["V.S. Mouse 3.1!!!", "V.S. Mouse 3.1!!!"],
+        ["O placeholder feito pelo Maxxer para\nmusicas que não tem album", "Maxxer's placeholer album cover"],
+        ["Quico botando ovo", "Yeah"]
+    ]
+}

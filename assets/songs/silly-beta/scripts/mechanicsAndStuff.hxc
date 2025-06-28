@@ -1,0 +1,60 @@
+import states.PlayState;
+import flixel.FlxG;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.FlxSprite;
+import Paths;
+
+var downscroll:Bool;
+var gfHerself:FlxSprite;
+
+function createPreCharacters()
+{
+    gfHerself = new FlxSprite(-175, -85); // maior jogadora do vasco (JDaniel - 2024)
+    gfHerself.frames = Paths.getSparrowAtlas('characters/17quedas/herselfMinus');
+    gfHerself.animation.addByPrefix('idle', 'dead minus', 24, true);
+    gfHerself.animation.play('idle');
+    gfHerself.alpha = 0.9;
+    gfHerself.scale.set(0.85, 0.85);
+    this.add(gfHerself);
+
+    FlxTween.circularMotion(gfHerself, -175, -85, 30, 0, true, 8, true, {type: FlxTween.LOOPING});
+    FlxTween.tween(gfHerself, {alpha: 0.6}, 6, {ease: FlxEase.sineInOut, type: FlxTween.PINGPONG});
+}
+
+function onNoteHit(note:Note, strumline:Strumline)
+{
+    if(!note.isHold && !strumline.isPlayer && PlayState.health >= 0.1)
+        PlayState.health -= 0.025;
+}
+
+function onEventHit(eventName:String, value1:String, value2:String, value3:String)
+{
+    if(eventName == 'none')
+        paraLanches();
+}
+
+function paraLanches()
+{
+    downscroll = !this.bfStrumline.downscroll;
+
+     // FlxTween time!
+    FlxTween.tween(this.hudBuild.healthBar.bg, {y: downscroll?70:FlxG.height - this.hudBuild.healthBar.bg.height - 50}, 1, {ease: FlxEase.bounceOut});
+    FlxTween.tween(this.hudBuild.infoTxt, {y: downscroll?93:675}, 1, {ease: FlxEase.bounceOut});
+    FlxTween.tween(this.hudBuild.timeTxt, {y: !downscroll?8:FlxG.height - this.hudBuild.timeTxt.height - 8}, 1, {ease: FlxEase.bounceOut});
+
+    for(strumline in this.strumlines.members)
+    {
+        new FlxTimer().start(0.5, function(tmr:FlxTimer) { // I hate timers
+            strumline.x = this.setStrumlineDefaultX()[strumline.ID];
+            strumline.downscroll = downscroll;
+            // strumline.updateHitbox();
+        });
+    }
+
+    for(i in 0...4) {
+        FlxTween.tween(this.bfStrumline.strumGroup.members[i], {y: !downscroll?110:FlxG.height - 110}, 1+i/10, {ease: FlxEase.bounceOut});
+        FlxTween.tween(this.dadStrumline.strumGroup.members[i], {y: !downscroll?110:FlxG.height - 110}, 1+i/10, {ease: FlxEase.bounceOut});
+    }
+}

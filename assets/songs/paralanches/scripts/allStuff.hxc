@@ -1,0 +1,119 @@
+// maioria das coisa e event, mas umas coisas vou mexer aqui
+import states.PlayState;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import Paths;
+import flixel.FlxG;
+import backend.game.SaveData;
+import backend.utils.CoolUtil;
+// import flixel.math.FlxRect;
+
+var fandangos:FlxSprite;
+
+// var beatingNow:Bool = false;
+// var zoomFlow:Float = 1;
+// var beatInHit:Float = 1.03;
+// var muchBeatsPerSecond:Int = 3;
+// var beatTime:Float = 1;
+// var zoomBeating:FlxTween;
+
+// var rectCut:FlxRect;
+// var startCuttingMyBallsOff:Bool = false;
+// var loseMore:Float = 0;
+
+function createPost()
+{
+    this.camHUD.visible = false;
+    this.camStrum.visible = false;
+    // PlayState.botplay = true;
+
+    fandangos = new FlxSprite(0,0, Paths.image('songsAssets/paraFotos/delicia2'));
+    fandangos.cameras = [this.camOther];
+    fandangos.alpha = 0;
+    this.add(fandangos);
+}
+
+function onEventHit(name, v1, v2, v3)
+{
+    if(name == 'Song Script Event')
+    {
+        switch(v1)
+        {
+            case "esfihaFinal":
+                fandangos.cameras = [this.camOther];
+                fandangos.loadGraphic(Paths.image('songsAssets/paraFotos/lixo'));
+                fandangos.alpha = CoolUtil.stringToFloat(v2);
+                fandangos.scale.set(CoolUtil.stringToFloat(v2), CoolUtil.stringToFloat(v2));
+                fandangos.screenCenter();
+                fandangos.visible = true;
+                FlxTween.tween(fandangos, {alpha: CoolUtil.stringToFloat(v3), "scale.x": 1*CoolUtil.stringToFloat(v3), "scale.y": 1*CoolUtil.stringToFloat(v3), angle: 180*CoolUtil.stringToFloat(v2)}, 5, {ease: FlxEase.expoOut});
+
+            // case "heartEnd":
+            //     startCuttingMyBallsOff = true;
+
+            case "showDelicias":
+                fandangos.alpha = 1;
+                var showing = SaveData.data.get("Flashing Lights").toUpperCase() == "OFF" || SaveData.data.get("Flashing Lights").toUpperCase() == "REDUCED" ? 1 : FlxG.random.int(0,12); // muito flash
+                fandangos.loadGraphic(Paths.image('songsAssets/paraFotos/'+showing));
+                fandangos.visible = CoolUtil.stringToBool(v2);
+
+            case "flipBar":
+                this.hudBuild.healthBar.flipIcons = CoolUtil.stringToBool(v2);
+
+            // case "startBeating":
+            //     if(v2 != '') {
+            //         beatingNow = true;
+            //         beatInHit = CoolUtil.stringToFloat(v2);
+            //         zoomFlow = CoolUtil.stringToFloat(v3);
+            //     } else beatingNow = false;
+            // case "cancelBeating":
+            //     beatingNow = false;
+            //     if(zoomBeating) zoomBeating.cancel();
+            // case "changeBeatStuff":
+            //     muchBeatsPerSecond = CoolUtil.stringToInt(v2);
+            //     beatTime = CoolUtil.stringToFloat(v3);
+        }
+    }
+}
+function stepHit(step)
+{
+    if(step == 1)
+        FlxTween.tween(fandangos, {alpha: 0.6}, 4.5/*, {onComplete: function(a:FlxTween){fandangos.destroy(); this.camHUD.visible = true}}*/); // não funcionq
+
+    if(step == 49) {
+        fandangos.visible = false;
+        fandangos.cameras = [this.camHUD];
+    }
+    if(step == 640) {
+        PlayState.moveCamWithStrum = false;
+        this.camHUD.alpha = 0;
+        FlxTween.tween(this.camHUD, {alpha: 1}, 1.5);
+        if(!SaveData.data.get("Middlescroll")) {
+            for(i in 0...4) {
+                FlxTween.tween(this.bfStrumline.strumGroup.members[i], {x:this.dadStrumline.strumGroup.members[i].x, angle: 360}, 1.5+i/10, {ease: FlxEase.expoOut});
+                FlxTween.tween(this.dadStrumline.strumGroup.members[i], {x: this.bfStrumline.strumGroup.members[i].x, angle: 360}, 1.5+i/10, {ease: FlxEase.expoOut});
+            }
+        }
+    }
+    if(step == 792) {
+        PlayState.moveCamWithStrum = false;
+        FlxTween.tween(this.camHUD, {alpha: 0}, 0.5);
+        if(!SaveData.data.get("Middlescroll")) {
+            for(i in 0...4) {
+                FlxTween.tween(this.bfStrumline.strumGroup.members[i], {x:this.dadStrumline.strumGroup.members[i].x, angle: 0}, 1.5+i/10, {ease: FlxEase.expoOut});
+                FlxTween.tween(this.dadStrumline.strumGroup.members[i], {x: this.bfStrumline.strumGroup.members[i].x, angle: 0}, 1.5+i/10, {ease: FlxEase.expoOut});
+            }
+        }
+    }
+    if(step == 796) this.stageBuild.changeBGcolor(0xFF7F7F7F);
+    if(step == 800) this.camHUD.alpha = 1;
+    if(step == 1318) FlxTween.tween(this, {"camHUD.alpha": 0, "camStrum.alpha": 0}, 0.5); // lembrei que dava para fazer isso
+
+
+    // if(step % muchBeatsPerSecond == 0 && beatingNow==true) {
+    //     if(zoomBeating) zoomBeating.cancel();
+    //     this.camGame.zoom = beatInHit;
+    //     zoomBeating = FlxTween.tween(this.camGame, {zoom: zoomFlow}, beatTime, {ease: FlxEase.expoOut});
+    // }
+}

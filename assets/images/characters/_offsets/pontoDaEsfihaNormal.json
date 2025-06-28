@@ -1,0 +1,61 @@
+{
+	"globalOffset": [
+		0,
+		0
+	],
+	"animOffsets": [
+		[
+			"singRIGHTmiss",
+			-50,
+			100
+		],
+		[
+			"singDOWN",
+			-10,
+			-35
+		],
+		[
+			"singLEFTmiss",
+			-50,
+			100
+		],
+		[
+			"singUP",
+			-18,
+			170
+		],
+		[
+			"idle",
+			0,
+			0
+		],
+		[
+			"singDOWNmiss",
+			-50,
+			100
+		],
+		[
+			"singRIGHT",
+			0,
+			6
+		],
+		[
+			"singLEFT",
+			95,
+			70
+		],
+		[
+			"singUPmiss",
+			-50,
+			100
+		]
+	],
+	"ratingsOffset": [
+		0,
+		0
+	],
+	"cameraOffset": [
+		10,
+		-120
+	]
+}

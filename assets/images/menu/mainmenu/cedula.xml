@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cedula.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bicho0000" x="6" y="6" width="431" height="587" frameX="0" frameY="-7" frameWidth="431" frameHeight="595"/>
+	<SubTexture name="bicho0001" x="6" y="6" width="431" height="587" frameX="0" frameY="-7" frameWidth="431" frameHeight="595"/>
+	<SubTexture name="bicho0002" x="443" y="6" width="424" height="595" frameX="-3" frameY="0" frameWidth="431" frameHeight="595"/>
+</TextureAtlas>

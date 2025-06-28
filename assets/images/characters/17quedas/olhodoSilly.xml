@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf silly.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle s0000" x="0" y="0" width="333" height="450"/>
+	<SubTexture name="idle s0001" x="0" y="0" width="333" height="450"/>
+	<SubTexture name="idle s0002" x="333" y="0" width="333" height="450"/>
+	<SubTexture name="idle s0003" x="333" y="0" width="333" height="450"/>
+	<SubTexture name="idle s0004" x="666" y="0" width="333" height="450"/>
+	<SubTexture name="idle s0005" x="666" y="0" width="333" height="450"/>
+</TextureAtlas>
